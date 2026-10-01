@@ -72,7 +72,7 @@ class WordOrb:
     """Synchronous Word Orb API client.
 
     Args:
-        api_key: Optional API key. Free tier (500 req/day) works without one.
+        api_key: Optional API key. Without one, most read endpoints allow 200 calls/day per IP; a key gives 10,000 calls/day.
         base_url: Override the API base URL (default ``https://wordorb.ai``).
         timeout: Request timeout in seconds.
         max_retries: Maximum number of retries on rate-limit (429) responses.
@@ -81,7 +81,7 @@ class WordOrb:
 
         from wordorb import WordOrb
 
-        orb = WordOrb()                         # free tier, no key needed
+        orb = WordOrb()                         # no key: 200 calls/day per IP
         word = orb.enrich("courage")
         print(word.definition, word.ipa)
     """
@@ -223,7 +223,7 @@ class AsyncWordOrb:
     """Asynchronous Word Orb API client.
 
     Args:
-        api_key: Optional API key. Free tier (500 req/day) works without one.
+        api_key: Optional API key. Without one, most read endpoints allow 200 calls/day per IP; a key gives 10,000 calls/day.
         base_url: Override the API base URL (default ``https://wordorb.ai``).
         timeout: Request timeout in seconds.
         max_retries: Maximum number of retries on rate-limit (429) responses.

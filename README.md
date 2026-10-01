@@ -19,7 +19,7 @@ pip install wordorb
 ```python
 from wordorb import WordOrb
 
-orb = WordOrb()  # Free tier — 500 requests/day, no API key needed
+orb = WordOrb()  # No key: 200 calls/day per IP
 
 # Look up a word
 word = orb.enrich("courage")
@@ -85,13 +85,13 @@ asyncio.run(main())
 ## Authentication
 
 ```python
-# Free tier: 500 requests/day, no key needed
+# No key: 200 calls/day per IP. With a key: 10,000 calls/day.
 orb = WordOrb()
 
 # With API key: higher limits
 orb = WordOrb(api_key="wo_your_key_here")
 
-# Get a free key: POST https://wordorb.ai/api/signup
+# Get a key (no card needed): POST https://wordorb.ai/api/signup
 ```
 
 ## CLI
