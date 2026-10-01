@@ -41,7 +41,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--api-key",
         default=None,
-        help="Word Orb API key (optional for free tier)",
+        help="Word Orb API key (optional; without one, 200 calls/day per IP)",
     )
     parser.add_argument(
         "--graph",

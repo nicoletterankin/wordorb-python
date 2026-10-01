@@ -4,7 +4,7 @@ Quickstart::
 
     from wordorb import WordOrb
 
-    orb = WordOrb()                     # free tier, no API key needed
+    orb = WordOrb()                     # no key: 200 calls/day per IP
     word = orb.enrich("courage")
     print(word.definition, word.ipa)
 
